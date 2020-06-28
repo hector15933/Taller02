@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
-        android:id="@+id/password_edt"
+        android:id="@+id/password_edt_registro"
         android:hint="Ingrese contraseña"
         android:inputType="textPassword"
         android:layout_width="match_parent"

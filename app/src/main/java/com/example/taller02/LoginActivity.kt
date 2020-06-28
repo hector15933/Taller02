@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_login2.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.password
 
 class LoginActivity : AppCompatActivity() {
 

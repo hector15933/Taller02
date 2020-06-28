@@ -20,7 +20,7 @@ class RegistrarseActivity : AppCompatActivity() {
             val dni=dni_edt.text.toString()
             val direccion=direccion_edt.toString()
             val user=usuario_edt.text.toString()
-            val password=password.toString()
+            val password=password_edt_registro.text.toString()
             val experienced=switchh.isChecked
 
             val editor=sharedPreferences.edit()
