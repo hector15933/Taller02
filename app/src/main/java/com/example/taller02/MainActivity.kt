@@ -15,18 +15,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val sharedPreferences= getSharedPreferences("TALLER_KOTLIN_FORM", Context.MODE_PRIVATE)
         val user=sharedPreferences.getString("USER","")
-        val password=sharedPreferences.getString("PASSWORD","")
+        val passwordsp=sharedPreferences.getString("PASSWORD","")
 
-        val userName=username.text.toString()
-        val passwordmain=user
-
+        val password123: EditText = findViewById(R.id.password)
+        val pwd = password123.text.toString();
 
         login.setOnClickListener {
 
+            val userName=username.text.toString()
+            val passwordmain=password.text.toString()
 
-            if(userName.equals(user.toString())&&passwordmain.equals(password.toString())){
+            if(userName.equals(user)){
                 val intent = Intent(this, LoginActivity::class.java)
-                Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Bienvenido $passwordmain xdd $user", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
             }else{
                 Toast.makeText(this, "Datos Incorrectos", Toast.LENGTH_SHORT).show()

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_login2.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -21,6 +20,8 @@ class LoginActivity : AppCompatActivity() {
             val dni=dni_edt.text.toString()
             val direccion=direccion_edt.text.toString()
             val experienced=switchh.isChecked
+            val user=sharedPreferences.getString("USER","")
+            val password=sharedPreferences.getString("PASSWORD","")
 
             val editor=sharedPreferences.edit()
 
@@ -28,6 +29,8 @@ class LoginActivity : AppCompatActivity() {
             editor.putString("APELLIDOS",apellidos)
             editor.putString("DNI",dni)
             editor.putString("DIRECCION",direccion)
+            editor.putString("USER",user)
+            editor.putString("PASSWORD",password)
             editor.putBoolean("EXPERIENCED",experienced)
 
             editor.apply()

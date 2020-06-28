@@ -1,6 +1,7 @@
 package com.example.taller02
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -18,7 +19,7 @@ class RegistrarseActivity : AppCompatActivity() {
             val name=nameEt_edt.text.toString().trim()
             val apellidos=apellido_edt.text.toString()
             val dni=dni_edt.text.toString()
-            val direccion=direccion_edt.toString()
+            val direccion=direccion_edt.text.toString()
             val user=usuario_edt.text.toString()
             val password=password_edt_registro.text.toString()
             val experienced=switchh.isChecked
@@ -34,6 +35,9 @@ class RegistrarseActivity : AppCompatActivity() {
             editor.putBoolean("EXPERIENCED",experienced)
 
             editor.apply()
+
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
 
         }
 
